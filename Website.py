@@ -4,7 +4,7 @@ import json
 from streamlit_lottie import st_lottie
 from PIL import Image
 from streamlit_option_menu import option_menu
-from st_pages import hide_pages
+import st-pages
 import re
 import base64 
 from pathlib import Path
