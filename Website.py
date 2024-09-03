@@ -4,7 +4,7 @@ import json
 from streamlit_lottie import st_lottie
 from PIL import Image
 from streamlit_option_menu import option_menu
-from st_pages import hide_pages 
+from st_pages import hide_pages
 import re
 import base64 
 from pathlib import Path
@@ -320,7 +320,7 @@ input[type="text" i] {{
           with explainimage:
                st.image(explain)
      if selectsec=="علمي":
-          scitable=load_workbook('c:/cp/Science.xlsx')
+          scitable=load_workbook('Science.xlsx')
           activescitable=scitable.active
           counter=1
           for loop in range(1228):
@@ -405,7 +405,7 @@ input[type="text" i] {{
                if limit==50:
                     st.markdown("<h4 style='text-align: right; color: #000000;'> لقد تخطى عدد نتائج بحثك الحد الأقصى للعرض الموضوع لحماية أداء الموقع، نرجوا منك أن تقوم بتخصيص عملية البحث في المرات القادمة</h4>", unsafe_allow_html=True)
      if selectsec== "أدبي":
-          littable=load_workbook('c:/cp/Litterature.xlsx')
+          littable=load_workbook('Litterature.xlsx')
           activelittable=littable.active
           counter=1
           for loop in range(363):
