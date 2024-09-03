@@ -154,7 +154,7 @@ if select=="معلومات عن الجامعة":
         }}
         </style>
         """
-        fees=load_workbook('c:/cp/tuition.xlsx')
+        fees=load_workbook('tuition.xlsx')
         activefees=fees.active
         counter=1
         allfees=[]

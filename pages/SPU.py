@@ -153,7 +153,7 @@ if select=="معلومات عن الجامعة":
         st.write("<a href='https://telegram.me/SPUchannel' style='text-align: right; color: #0090e0; font-weight: bolder; font-weight: 600; font-size: 1.2rem;'>  Telegram-تيليغرام 🔷 </a>", unsafe_allow_html=True)
     if selectuni=="الرسوم الدراسية":
         st.markdown("<h3 style='text-align: right; color: #00b0f0;'> أقساط الدراسة </h3>" , unsafe_allow_html=True)
-        fees=load_workbook('c:/cp/tuition.xlsx')
+        fees=load_workbook('tuition.xlsx')
         activefees=fees.active
         counter=1
         allfees=[]

@@ -147,11 +147,11 @@ if select=="معلومات عن الجامعة":
         st.markdown("<h5 style='text-align: right; color: #000000;'> بين 100 و500 ألف ليرة سورية شهرياً باستخدام وسائل نقل خاصة أو بالاتفاق مع سائق حافلة أو أجرة حسب البعد عن الكلية </h5>" , unsafe_allow_html=True)
         st.write("---")
         st.markdown("<h2 style='text-align: right; color: #00B0F0;'> للطلاب السوريين ومن بحكمهم الحاصلين على شهادة ثانوية غير سورية </h2>" , unsafe_allow_html=True)
-        image=Image.open("C:/CP/pictures/f1.jpg")
+        image=Image.open("pictures/f1.jpg")
         st.image(image)
         st.write("---")
         st.markdown("<h2 style='text-align: right; color: #00B0F0;'> للطلاب العرب و الأجانب </h2>" , unsafe_allow_html=True)
-        image=Image.open("C:/CP/pictures/f2.jpg")
+        image=Image.open("pictures/f2.jpg")
         st.image(image)
     if selectuni=="المنشآت التابعة":
         llc,rrc=st.columns(2)

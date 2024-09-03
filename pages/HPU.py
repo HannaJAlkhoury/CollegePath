@@ -154,7 +154,7 @@ if select=="معلومات عن الجامعة":
         st.write("<a href='https://www.linkedin.com/school/al-hawash-private-university/?trk=public-post_share-update_actor-text' style='text-align: right; color: #0010d0; font-weight: bolder; font-weight: 600; font-size: 1.2rem;'>  LinkedIN-لينكدإن 🔷 </a>", unsafe_allow_html=True)
     if selectuni=="الرسوم الدراسية":
         st.markdown("<h3 style='text-align: right; color: #00b0f0;'> أقساط الجامعة </h3>" , unsafe_allow_html=True)
-        fees=load_workbook('c:/cp/tuition.xlsx')
+        fees=load_workbook('tuition.xlsx')
         activefees=fees.active
         counter=1
         allfees=[]

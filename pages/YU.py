@@ -158,7 +158,7 @@ if select=="معلومات عن الجامعة":
         """
         st.markdown(alignpic, unsafe_allow_html=True )
         st.markdown("<h3 style='text-align: right; color: #00b0f0;'> أقساط الجامعة </h3>" , unsafe_allow_html=True)
-        fees=load_workbook('c:/cp/tuition.xlsx')
+        fees=load_workbook('tuition.xlsx')
         activefees=fees.active
         counter=1
         allfees=[]
