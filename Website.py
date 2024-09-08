@@ -398,9 +398,7 @@ input[type="text" i] {{
                     st.markdown( title, unsafe_allow_html=True)          
                     notleft,notright=st.columns(2)
                     with notright:
-                         st.markdown("<h4 style='text-align: right; color: #000000;'>" + major[2] + ":"+ "علامة القبول "+ major[4] + "</h4>", unsafe_allow_html=True)
-                    with notleft:   
-                         st.markdown("<h4 style='text-align: right; color: #000000;'>"+major[3]+ ":"+"الرمز</h4>", unsafe_allow_html=True)          
+                         st.markdown("<h4 style='text-align: right; color: #000000;'>" + major[2] + ":"+ "علامة القبول "+ major[4] + "</h4>", unsafe_allow_html=True)          
                     st.write("---")
                if limit==50:
                     st.markdown("<h4 style='text-align: right; color: #000000;'> لقد تخطى عدد نتائج بحثك الحد الأقصى للعرض الموضوع لحماية أداء الموقع، نرجوا منك أن تقوم بتخصيص عملية البحث في المرات القادمة</h4>", unsafe_allow_html=True)
@@ -464,9 +462,7 @@ input[type="text" i] {{
                     st.markdown( title, unsafe_allow_html=True)          
                     notleft,notright=st.columns(2)
                     with notright:
-                         st.markdown("<h4 style='text-align: right; color: #000000;'>" + major[2] + ":"+ "علامة القبول "+ major[4] + "</h4>", unsafe_allow_html=True)
-                    with notleft:   
-                         st.markdown("<h4 style='text-align: right; color: #000000;'>"+major[3]+ ":"+"الرمز</h4>", unsafe_allow_html=True)          
+                         st.markdown("<h4 style='text-align: right; color: #000000;'>" + major[2] + ":"+ "علامة القبول "+ major[4] + "</h4>", unsafe_allow_html=True)          
                     st.write("---")
                if limit==50:
                     st.markdown("<h4 style='text-align: right; color: #000000;'> لقد تخطى عدد نتائج بحثك الحد الأقصى للعرض الموضوع لحماية أداء الموقع، نرجوا منك أن تقوم بتخصيص عملية البحث في المرات القادمة</h4>", unsafe_allow_html=True)      
