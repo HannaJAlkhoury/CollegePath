@@ -322,7 +322,7 @@ if 0==0:
                     st.markdown("<h5 style='text-align: right; color: #000000;'>  ترتيب الجامعة على العالم: 21156 </h5>" , unsafe_allow_html=True)      
                     st.write("<a href='https://www.hiba.edu.sy/' style='text-align: right; color: #0070C0; font-weight: bolder; font-weight: 600; font-size: 1.2rem;'>hiba.edu.sy</a>", unsafe_allow_html=True) 
      if selectuni=="الجامعات الخاصة":
-          st.markdown("<h5 style='text-align: center; color: #0070c0;'> جميع الرسوم الدراسية هي للعام الدراسي 2023/24 وسيتم تحديثها عند صدور الرسوم الجديدة </h5>" , unsafe_allow_html=True)
+          st.markdown("<h5 style='text-align: center; color: #0070c0;'> جميع الرسوم الدراسية هي للعام الدراسي الحالي 2024/25  </h5>" , unsafe_allow_html=True)
           l1, r1=st.columns((4,1))
           with r1:
                st.write("###")
