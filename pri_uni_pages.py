@@ -48,6 +48,7 @@ def Uni_Page(uniname,nickname,map_link,uni_image,website,location,rank,descripti
     .st-emotion-cache-yp5fhh{{background-color:#FFFFFF;}}
     .pagebutton{{display: inherit;border-bottom: 2px solid #205090; border-radius:6px; padding:12px; text-align: center; color:#ffffff; font-weight: bolder; font-size: 1.2rem; text-decoration: none; transition: transform 0.3s ease-in-out;}}
     .pagebutton:hover{{transform: scale(1.05);}}
+    p{{text-align:right}}
     h1,h2,h3,h4,h5,h6{{direction: rtl}}
     """
     textwrap=f"""
@@ -77,9 +78,7 @@ def Uni_Page(uniname,nickname,map_link,uni_image,website,location,rank,descripti
         gmap=f"""<p><iframe src={map_link} width="100%" height="600" style="border:10;" allowfullscreen="True" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>"""
         st.markdown(gmap, unsafe_allow_html=True)
     if select=="معلومات عن الجامعة":
-        st.write("###")
         st.markdown(f"<h2 style='text-align: right; color: #00B0F0;'> {uniname} </h2>" , unsafe_allow_html=True)
-        st.write("###")
         selectuni = option_menu(
             menu_icon=None,
             menu_title=None,
@@ -121,7 +120,7 @@ def Uni_Page(uniname,nickname,map_link,uni_image,website,location,rank,descripti
                     st.write(f"<a href='{link}' style='text-align: right; color: #d0d010; font-weight: bolder; font-weight: 600; font-size: 1.2rem;'>  Instagram-إنستاغرام 🟨 </a>", unsafe_allow_html=True)
                 if "t.me" in link:    
                     st.write(f"<a href='{link}' style='text-align: right; color: #0090e0; font-weight: bolder; font-weight: 600; font-size: 1.2rem;'>  Telegram-تيليغرام 🔷 </a>", unsafe_allow_html=True)
-                if "twitter" or "x.com" in link:    
+                if "twitter" in link:    
                     st.write(f"<a href='{link}' style='text-align: right; color: #020209; font-weight: bolder; font-weight: 600; font-size: 1.2rem;'>  X (Twitter) - إكس (تويتر) ✖ </a>", unsafe_allow_html=True)
                 if "linkedin" in link:   
                     st.write(f"<a href='{link}' style='text-align: right; color: #0010d0; font-weight: bolder; font-weight: 600; font-size: 1.2rem;'>  LinkedIN-لينكدإن 🔷 </a>", unsafe_allow_html=True)
