@@ -1,0 +1,33 @@
+from pri_uni_pages import Uni_Page
+Uni_Page(
+    uniname="الجامعة الدولية للعلوم والنهضة",
+    nickname="IUSR",
+    map_link="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d16492.12901616982!2d36.99609460224877!3d36.567764585535514!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152fc1b05cbac20b%3A0x453db8c541b9ba75!2z2KfZhNis2KfZhdi52Kkg2KfZhNiv2YjZhNmK2Kkg2YTZhNi52YTZiNmFINmI2KfZhNmG2YfYttipX0lVU1I!5e0!3m2!1sen!2s!4v1753383778706!5m2!1sen!2s",
+    uni_image="IUSR.webp",
+    website='https://iusr.university/',
+    location='https://www.google.com/maps/place/%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D8%A9+%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A%D8%A9+%D9%84%D9%84%D8%B9%D9%84%D9%88%D9%85+%D9%88%D8%A7%D9%84%D9%86%D9%87%D8%B6%D8%A9_IUSR%E2%80%AD/@36.5677418,36.9942267,17z/data=!3m1!4b1!4m6!3m5!1s0x152fc1b05cbac20b:0x453db8c541b9ba75!8m2!3d36.5677375!4d36.9968016!16s%2Fg%2F11vl40fcxp?authuser=0&entry=ttu&g_ep=EgoyMDI1MDcyMS4wIKXMDSoASAFQAw%3D%3D',
+    rank="26185",
+    description=" الجامعة الدولية للعلوم والنهضة جامعة سوريا تأسست عام 2017 تقع بالقرب من مدينة إعزاز في شمال محافظة حلب ",
+    note=None,
+    social_media=['https://www.facebook.com/IUSRIUSR','https://twitter.com/IUSRIUSR','https://t.me/IUSR_IUSR','https://www.instagram.com/iusriusr/'],
+    majors=[],
+    colleges=[["العلوم الطبية والصحية", "كلية طب الأسنان" ," كلية الصيدلة ","كلية العلوم الصحية"],
+              ["كليات الهندسة","كلية الهندسة المعلوماتية","كلية الهندسة المعمارية"],
+              ["كليات أخرى"," كلية الاقتصاد و الإدارة ","كلية التربية","كلية الحقوق"]],
+    campus_housing=False,
+    unihospitals=[],
+    High_inst=[],
+    Mid_inst=[
+'المعهد الطبي (تمريض)',
+'المعهد الطبي (مخبري)',
+'المعهد الطبي (قبالة)',
+'معهد الصيدلة',
+'معهد التعويضات السنية',
+'معهد أمن المعلومات والشبكات',
+'معهد تكنولوجيا الإعلام والصحافة',
+'معهد إدارة الموارد البشرية',
+'معهد نظم المعلومات الادارية',
+'معهد اللغة الانكليزية',
+'معهد الإرشاد الإجتماعي',
+'معهد العلوم الجنائية']
+    )

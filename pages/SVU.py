@@ -5,76 +5,45 @@ from st_pages import hide_pages
 icon = Image.open("images/cap.png")
 st.set_page_config(page_title="College Path-الجامعة السورية الافتراضية", page_icon=icon, layout= "wide")
 hide_pages(["AAST","sp","majors","universities","application","DU", "Website", "AU",'ANTU','MU','QAU','ASPU','EBU','HPU','ANU','ANU','JU','AUST','SU','IU','CU','WPU','YU','RU','WU','IUST','SPU','AIU','KU','HU','SVU','EU','TU','TAU','BU','HIAST'])
-Page_header=f"""
-<style> 
-.st-emotion-cache-hsmt6w{{
-background-color:#ffffff;
-color:#0070c0;
-font-weight:bolder;
-}}
-a{{
-color:#000000;
-text-decoration:none;
-}}
-body {{
-    text-align: right;
-}}
+SidebarStyle=f"""
+.st-emotion-cache-15rnnt1{{visibility: hidden; height=0;padding=0;}}
+.st-emotion-cache-9kd36y{{visibility: hidden;height=0;padding=0;}}
+.st-emotion-cache-79elbk {{visibility: hidden;height=0;padding=0;}}
+.st-emotion-cache-kgpedg{{padding: calc(1.375rem) 1.5rem 0rem;}}
+.st-emotion-cache-1qdyr5 {{padding: 0rem 1.5rem 5rem;}}
+"""
+hide_img_fs = f'''
+.e1yh3qqy2:hover .st-emotion-cache-1kw2d9g, .e1yh3qqy2:active .st-emotion-cache-1kw2d9g, .e1yh3qqy2:focus-visible .st-emotion-cache-1kw2d9g{{visibility: hidden;}}
+.st-emotion-cache-1tg4cha svg{{visibility: hidden;}}     
+'''
+Page_header=f""" 
+.st-emotion-cache-1tb82rd a:hover{{background-color:#E9E9E9; color:#000000;}}
+.st-emotion-cache-1tb82rd a{{background-color:#FFFFFF; color:#222222;}}
+.st-emotion-cache-gi0tri{{visibility: hidden;}}
+#MainMenu {{visibility: hidden;}}
 [data-testid="stHeader"] {{
-background-color: #0070C0;
-height:3.5rem;
+background: linear-gradient(to right, #0073cc,#205090);
 }}
-.css-fblp2m {{
-color: #0070C0;
-font-size: 2rem;
-}}
-.css-hsmt6w{{
-background-color: #FFFFFF;    
-}}
-.css-1wrgccu{{
-background-color: #FFFFFF;
-}}
-.css-17wpp4c {{
-border-bottom: 1px solid rgb(0, 176, 240);
-}}
-hr{{
-margin-top:0;
-}}
-.css-grcmwr{{
-gap:0;
-}}
-h2{{
-padding-top:0rem;
-}}
-.css-1kyxreq{{
-justify-content:center;
-}}
-button[title="View fullscreen"]{{
-visibility: hidden;}}
-.css-z5fcl4 {{
-    width: 100%;
-    padding: 4rem 2rem 2rem;}}
-    .st-emotion-cache-z5fcl4 {{
-    width: 100%;
-    padding: 1rem 6% 3rem;
-    }}
-    #MainMenu {{visibility: hidden;}}
-footer {{visibility: hidden;}}
-.st-emotion-cache-17wpp4c{{border-bottom: 1px solid rgb(60 55 143 / 0%);}}
-.st-emotion-cache-1dgmtll svg {{
-    stroke: transparent;
-}}
-.st-emotion-cache-1dgmtll{{
-background-color:transparent;
-visibility: hidden;
-}}
-.st-emotion-cache-1kyxreq {{
+.st-emotion-cache-0{{
+     align-items: flex-end;
     display: flex;
-    flex-flow: wrap;
-    row-gap: 1rem;
-    justify-content: space-around;
+    flex-direction: row-reverse;
+    align-content: stretch;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }}
-</style>"""
-st.markdown(Page_header, unsafe_allow_html=True)
+.st-emotion-cache-yp5fhh{{background-color:#FFFFFF;}}
+.st-emotion-cache-9hz7ad p{{text-align: end;}}
+a:hover{{background-color:#E0FFFF;}}
+h1,h2,h3,h4,h5,h6{{direction: rtl}}
+"""
+textwrap=f"""
+.st-emotion-cache-1lvxfs7{{
+    word-break: auto-phrase;
+        text-wrap: auto
+}}
+"""
+st.markdown("<style>"+textwrap+Page_header+hide_img_fs+SidebarStyle+"</style>",unsafe_allow_html=True)
 with st.sidebar:
     logo = Image.open("images/logo.png")
     st.image(logo)
@@ -117,7 +86,7 @@ if select=="معلومات عن الجامعة":
             st.write("<a href='https://svuonline.org/ar' style='text-align: right; color: #0070C0; font-weight: bolder; font-weight: 600; font-size: 1.2rem;'> الموقع الإلكتروني🌐 </a>", unsafe_allow_html=True)
             st.write("<a href='https://www.google.com/maps/place/Syrian+Virtual+University/@33.5113781,36.2731257,17z/data=!3m1!4b1!4m6!3m5!1s0x1518e0ae102ae53d:0xdec26d70f4423ce9!8m2!3d33.5113781!4d36.2731257!16zL20vMGQ0bHZk?entry=ttu' style='text-align: right; color: #0070C0; font-weight: bolder; font-weight: 600; font-size: 1.2rem;'> موقع رئاسة الجامعة على الخريطة🗺  </a>", unsafe_allow_html=True)
             st.markdown("<h5 style='text-align: right; color: #000000;'> نوع الجامعة : حكومية افتراضية </h5>" , unsafe_allow_html=True)
-            st.markdown("<h5 style='text-align: right; color: #000000;'> ترتيب الجامعة على سوريا حسب ويبوميتريكس : 10 </h5>" , unsafe_allow_html=True)
+            st.markdown("<h5 style='text-align: right; color: #000000;'> ترتيب الجامعة على العالم حسب ويبوميتريكس : 7113 </h5>" , unsafe_allow_html=True)
         st.write("---")
         st.markdown("<h2 style='text-align: right; color: #00B0F0;'> نبذة عن الجامعة </h2>" , unsafe_allow_html=True)
         st.markdown("<h5 style='text-align: right; color: #000000;'> الجامعة الافتراضية السوريّة هي جامعة افتراضية افتُتحت في 2 سبتمبر عام 2002. تأسست الجامعة الافتراضية السورية، التي كانت السباقة إلى اعتماد التعليم الافتراضي في الشرق الأوسط، بقرار من وزارة التعليم العالي السورية، والتي تهدف إلى توفير تعليم من مستوى عالمي للطلبة السوريين في بلدهم، يشمل كافة القطاعات المهنية المتوفرة حالياً </h5>" , unsafe_allow_html=True)
