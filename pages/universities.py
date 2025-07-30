@@ -655,7 +655,7 @@ if selectuni=="الجامعات الخاصة":
      st.write("---") 
      l20, r20=st.columns((4,1))
      with r20:
-          RUimage= Image.open("images/ZIU.jpeg")
+          RUimage= Image.open("images/ZIU.png")
           st.image(RUimage)
      with l20:
           st.markdown("<h2 style='text-align: right; color: #00B0F0; font-weight:bold;'> جامعة الزيتونة </h2>" , unsafe_allow_html=True)
