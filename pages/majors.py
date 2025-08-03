@@ -4,7 +4,6 @@ from streamlit_option_menu import option_menu
 from st_pages import hide_pages
 import re
 from openpyxl import load_workbook
-from thefuzz import process,fuzz
 #Page Config     
 icon = Image.open("images/cap.png")
 st.set_page_config(page_title="الاختصاصات والفروع الجامعية في سوريا", page_icon=icon, layout= "wide")
@@ -250,4 +249,5 @@ if selectsec== "أدبي":
                     st.markdown("<h4 style='text-align: right; color: #000000;'>"+major[3]+ ":"+"الرمز</h4>", unsafe_allow_html=True)          
                st.write("---")
           if limit==50:
+
                st.markdown("<h4 style='text-align: right; color: #000000;'> لقد تخطى عدد نتائج بحثك الحد الأقصى للعرض الموضوع لحماية أداء الموقع، نرجوا منك أن تقوم بتخصيص عملية البحث في المرات القادمة</h4>", unsafe_allow_html=True)
