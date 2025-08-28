@@ -101,10 +101,8 @@ with right:
 st.write("---") 
 st.markdown("<h3 style='text-align: right; color: #00B0F0; font-weight:bold;'>> التقديم على المفاضلة</h3>", unsafe_allow_html=True)  
 st.markdown("<h4 style='text-align: right; color: #0070C0;'>> للطلاب السوريين ومن بحكمهم </h4>" , unsafe_allow_html=True) 
-st.markdown("<h5 style='text-align: right; color: #000000;'>   التقديم على المفاضلة إلكتروني، على الطالب تنزيل تطبيق المفاضلة على الجوال أو الدخول إلى الموقع الرسمي للمفاضلة  </h5>", unsafe_allow_html=True)          
-st. write("<a href='https://syria.shern.sy/web/mofa/' style='font-weight:bold;font-size:1.1rem;text-align: right;'>الموقع الرسمي للمفاضلة وسيفتح عند بدء المفاضلة</a>", unsafe_allow_html=True)
-st. write("<a href='https://play.google.com/store/apps/details?id=me.egate.moufadala&hl=en_US' style='font-weight:bold;font-size:1.1rem;text-align: right;'> رابط تحميل التطبيق من غوغل بلي </a>", unsafe_allow_html=True)
-st. write("<a href='http://mof.sy/mofa_site/web/SD08/msf/mofadalah9.apk' style='font-weight:bold;font-size:1.1rem;text-align: right;'> رابط التحميل المباشر للتطبيق للأندرويد فقط  </a>", unsafe_allow_html=True) 
+st.markdown("<h5 style='text-align: right; color: #000000;'>   التقديم على المفاضلة إلكتروني، على الطالب تنزيل تطبيق المفاضلة على الجوال  </h5>", unsafe_allow_html=True)          
+st. write("<a href='https://play.google.com/store/apps/details?id=me.egate.moufadala' style='font-weight:bold;font-size:1.1rem;text-align: right;'> رابط تحميل التطبيق من غوغل بلي </a>", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: right; color: #000000;'> يقوم الطالب بملء معلوماته الشخصية في الموقع ثم تصله رسالة نصية برمز التفعيل يقوم من خلاله الطالب بتفعيل حسابه والحصول على رمز المفاضلة الذي يجب ألا تتم مشاركته أبداً مع أي شخص </h5>", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: right; color: #000000;'> يتقدم الطالب على المفاضلة ويتوجب عليه التحقق من كل المعلومات بدقة متناهية قبل دفع رسوم الطلب وارساله </h5>", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: right; color: #000000;'> يتم الدفع الإلكتروني عبر تطبيق كاش موبايل لأم تي أن و سيرياتيل أو عبر حساب بنكي لأحد البنوك المعتمدة </h5>", unsafe_allow_html=True)
@@ -121,7 +119,7 @@ st.markdown("<h5 style='text-align: right; color: #000000;'> ملاحظة: عل�
 st.write("---")
 st.markdown("<h3 style='text-align: right; color: #00B0F0;'> ملاحظة :</h3>", unsafe_allow_html=True)
 st.markdown("<h5 style='text-align: right; color: #000000;'> إن الشرح المدون أعلاه هو شرح مختصر و مبسط يكفي الأغلبية العظمى من المتقدمين على الجامعات في سوريا من السوريين المقيمين أو من في حكمهم الحاصلين على الشهادة الثانوية السورية لكن إذا كان لديك أي استفسار أو شك أو كنت طالب سوري غير مقيم أو عربي أو أجنبي فيرجى قراءة دليل الطالب للتقدم للمفاضلات الذي تصدره وزارة التعليم العالي والبحث العلمي سنوياً على صفحتها على تيليجرام  </h5>", unsafe_allow_html=True)
-st. write("<a href='https://t.me/mohesr_official_channel' style='font-weight:bold;font-size:1.1rem;text-align: right;'> الصفحة الرسمية للوزارة على تيليتجرام </a>", unsafe_allow_html=True)
+st. write("<a href='https://t.me/SyMOHEASR' style='font-weight:bold;font-size:1.1rem;text-align: right;'> الصفحة الرسمية للوزارة على تيليتجرام </a>", unsafe_allow_html=True)
 with open("دليل_الطالب.pdf", "rb") as pdf_file1:
                PDFbyte1 = pdf_file1.read()
                st.download_button(label=" اضغط لتنزيل دليل الطالب ",
