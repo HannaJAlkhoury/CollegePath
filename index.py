@@ -17,14 +17,14 @@ def add_meta_tags():
     <meta property="og:url" content="https://collegepath.onrender.com/" />
     <meta property="og:title" content="College Path - مسار الجامعة" />
     <meta property="og:description" content="كل ما يحتاجه الطالب من شرح عن المفاضلة والاختصاصات الجامعية، ابحث عن الجامعة المناسبة في قائمة تضم جميع الجامعات السورية!!" />
-    <meta property="og:image" content="https://raw.github.com/HannaJAlkhoury/CollegePath/main/images/mthumbnail.webp" />
+    <meta property="og:image" content="https://raw.github.com/HannaJAlkhoury/CollegePath/main/images/metatag.webp" />
 
     <!-- X (Twitter) -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://collegepath.onrender.com/" />
     <meta property="twitter:title" content="College Path - مسار الجامعة" />
     <meta property="twitter:description" content="كل ما يحتاجه الطالب من شرح عن المفاضلة والاختصاصات الجامعية، ابحث عن الجامعة المناسبة في قائمة تضم جميع الجامعات السورية!!" />
-    <meta property="twitter:image" content="https://raw.github.com/HannaJAlkhoury/CollegePath/main/images/mthumbnail.webp" />
+    <meta property="twitter:image" content="https://raw.github.com/HannaJAlkhoury/CollegePath/main/images/metatag.webp" />
 
 '''
 
