@@ -1,2 +1,2 @@
-python inject_meta.py
-exec streamlit run app.py 
+python index.py
+exec streamlit run Website.py 
