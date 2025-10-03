@@ -4,20 +4,13 @@ from streamlit_option_menu import option_menu
 from st_pages import hide_pages
 from openpyxl import load_workbook
 def cost(unicost):
-    for costs in unicost:
-        if len(costs)==5:  
-            st.markdown("<h4 style='text-align: right; color: #0070c0;'>"+ costs[0] +"</h4>" , unsafe_allow_html=True) 
-            st.markdown("<h5 style='text-align: right; color: #000000;'> رسم الساعة المعتمد للسوريين المقيمين ومن بحكمهم بالليرة السورية:"+ costs[1] +"</h5>" , unsafe_allow_html=True)
-            st.markdown("<h5 style='text-align: right; color: #000000;'>الحد الأعلى لرسم السنة الدراسية بالليرة السورية:"+ costs[2] +"</h5>" , unsafe_allow_html=True)
-            st.markdown("<h5 style='text-align: right; color: #000000;'> للسوريين غير المقيمين بالدولار الأمريكي:"+ costs[3] +"</h5>" , unsafe_allow_html=True)
-            st.markdown("<h5 style='text-align: right; color: #000000;'> للعرب والأجانب بالدولار الأمريكي :"+ costs[4] +"</h5>" , unsafe_allow_html=True)
-        if len(costs)==3:  
-            st.markdown("<h4 style='text-align: right; color: #0070c0;'>"+ costs[0] +"</h4>" , unsafe_allow_html=True) 
-            st.markdown("<h5 style='text-align: right; color: #000000;'> رسم الساعة المعتمد للسوريين المقيمين ومن بحكمهم بالليرة السورية:"+ costs[1] +"</h5>" , unsafe_allow_html=True)
-            st.markdown("<h5 style='text-align: right; color: #000000;'>الحد الأعلى لرسم السنة الدراسية بالليرة السورية:"+ costs[2] +"</h5>" , unsafe_allow_html=True)
-        if len(costs)==2:
-            st.markdown("<h4 style='text-align: right; color: #0070c0;'>"+ costs[0] +"</h4>" , unsafe_allow_html=True) 
-            st.markdown("<h5 style='text-align: right; color: #000000;'> رسم الساعة المعتمد للسوريين المقيمين ومن بحكمهم بالليرة السورية:"+ costs[1] +"</h5>" , unsafe_allow_html=True)
+    for costs in unicost: 
+        st.markdown("<h4 style='text-align: right; color: #0070c0;'>"+ str(costs[0]) +"</h4>" , unsafe_allow_html=True) 
+        st.markdown("<h5 style='text-align: right; color: #000000;'> رسم الساعة المعتمد للسوريين المقيمين والغير مقيمين ومن بحكمهم بالدولار الأمريكي :"+ costs[1] +"</h5>" , unsafe_allow_html=True)
+        if costs[2]:    
+            st.markdown("<h5 style='text-align: right; color: #000000;'>الحد الأعلى لرسم السنة الدراسية بالدولار الأمريكي:"+ str(costs[2]) +"</h5>" , unsafe_allow_html=True)
+            if costs[3]:    
+                st.markdown("<h5 style='text-align: right; color: #000000;'> للعرب والأجانب بالدولار الأمريكي :"+ str(costs[3]) +"</h5>" , unsafe_allow_html=True)
     return
 def Uni_Page(uniname,nickname,map_link,uni_image,website,location,rank,description,note,majors,social_media,colleges=[],unihospitals=[],High_inst=[],Mid_inst=[],campus_housing=True):
     icon = Image.open("images/cap.png")
@@ -136,10 +129,10 @@ def Uni_Page(uniname,nickname,map_link,uni_image,website,location,rank,descripti
                 l=[]
                 for item in row:
                     if item.value==".":
-                            value=''
+                        value=''
                     else:
-                            value=item.value
-                            l.append(value)
+                        value=item.value
+                        l.append(value)
                 allfees.append(l)
             list=[]
             for major in allfees:
