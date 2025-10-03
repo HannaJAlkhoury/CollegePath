@@ -289,7 +289,7 @@ if selectuni=="الجامعات الحكومية":
      with l101:
           st.markdown("<h5 style='text-align: right; color: #000000;'> يهدف المعهد، بموجب قانون إحداثه، إلى تخريج المتخصصين والتدريب والتأهيل وتقديم الاستشارات في مختلف مجالات الفن السينمائي لتحقيق نهضة فنية في هذه المجالات </h5>" , unsafe_allow_html=True)
 if selectuni=="الجامعات الخاصة":
-     st.markdown("<h5 style='text-align: center; color: #0070c0;'> جميع الرسوم الدراسية هي للعام الدراسي 2024/25 وسيتم تحديثها عند صدور الرسوم الجديدة </h5>" , unsafe_allow_html=True)
+     st.markdown("<h5 style='text-align: center; color: #0070c0;'> تم تحديث رسوم الجامعات الخاصة </h5>" , unsafe_allow_html=True)
      l1, r1=st.columns((4,1))
      with r1:
           DUimage= Image.open("images/KU.webp")
