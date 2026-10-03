@@ -83,7 +83,7 @@ selectuni = option_menu(
 ) 
 #This Website is fully made by ENG HANNA JOHN ALKHOURY
 if selectuni=="الجامعات الحكومية":
-     st.markdown("<h5 style='text-align: center; color: #0070c0;'> جميع الرسوم الدراسية هي للعام الدراسي 2024/25 وسيتم تحديثها عند صدور الرسوم الجديدة </h5>" , unsafe_allow_html=True)
+     st.markdown("<h5 style='text-align: center; color: #0070c0;'> جميع الرسوم الدراسية تم تحديثها للعام الدراسي 2026/27  </h5>" , unsafe_allow_html=True)
      l1, r1=st.columns((4,1))
      with r1:
           DUimage= Image.open("images/DU.jpeg")
