@@ -70,7 +70,7 @@ with st.sidebar:
 selectuni = option_menu(
      menu_icon=None,
      menu_title=None,
-     options=["الجامعات الخاصة", "الجامعات الحكومية"],
+     options=["المعاهد العليا","الجامعات الخاصة", "الجامعات الحكومية"],
      icons=["houses","houses-fill"],
      default_index=1,
      orientation="horizontal",
@@ -81,7 +81,7 @@ selectuni = option_menu(
      "nav-link-selected": {"background-color": "00B0F0"},
 }
 ) 
-#This Website is fully made by student HANNA JOHN ALKHOURY
+#This Website is fully made by ENG HANNA JOHN ALKHOURY
 if selectuni=="الجامعات الحكومية":
      st.markdown("<h5 style='text-align: center; color: #0070c0;'> جميع الرسوم الدراسية هي للعام الدراسي 2024/25 وسيتم تحديثها عند صدور الرسوم الجديدة </h5>" , unsafe_allow_html=True)
      l1, r1=st.columns((4,1))
@@ -182,20 +182,6 @@ if selectuni=="الجامعات الحكومية":
                st.write("<a href='https://idlib.university/' style='text-align: right; color: #0070C0; font-weight: bolder; font-weight: 600; font-size: 1.2rem;'>idlib.university</a>", unsafe_allow_html=True) 
                st.write("<a href='IDU' target='_blank' class='.st-emotion-cache-g2ydmt' style='border: 1px solid #00B0F0; border-radius:5px; padding:6px; text-align: right; color:#00B0F0; font-weight: bolder; font-weight: 600; font-size: 1.2rem; text-decoration: none;'> ...اقرأ المزيد </a>", unsafe_allow_html=True)
      st.write("---")
-     l62, r62=st.columns((4,1))
-     with r62:
-          FAUimage= Image.open("images/FAU.webp")
-          st.image(FAUimage)
-     with l62:
-          st.markdown("<h2 style='text-align: right; color: #00B0F0; font-weight:bold;'> جامعة حلب في المناطق المحررة </h2>" , unsafe_allow_html=True)
-          l21,r21=st.columns(2)
-          with l21:
-               st.markdown("<h5 style='text-align: right; color: #000000;'> الموقع: حلب </h5>" , unsafe_allow_html=True)
-          with r21:
-               st.markdown("<h5 style='text-align: right; color: #000000;'>  ترتيب الجامعة على سوريا: 4742 </h5>" , unsafe_allow_html=True)      
-               st.write("<a href='https://uoaleppo.net/' style='text-align: right; color: #0070C0; font-weight: bolder; font-weight: 600; font-size: 1.2rem;'>uoaleppo.net</a>", unsafe_allow_html=True) 
-               st.write("<h5 >جامعة حلب في المناطق المحررة هي مؤسسة تعليمية رسمية تأسست عام 2015، ومركزها شمال محافظة حلب. تضم الجامعة 16 كلية و7 معاهد، تتوزع كليات الطب البشري والصيدلة والعلوم الصحية في مدينة مارع وباقي الكليات والمعاهد في مدينة أعزاز.</h5>", unsafe_allow_html=True)
-     st.write("---")
      l7, r7=st.columns((4,1))
      with r7:
           EUimage= Image.open("images/EU.jpeg")
@@ -228,19 +214,8 @@ if selectuni=="الجامعات الحكومية":
                st.write("<a href='http://svuonline.org/' style='text-align: right; color: #0070C0; font-weight: bolder; font-weight: 600; font-size: 1.2rem;'>svuonline.org</a>", unsafe_allow_html=True) 
                st.write("<a href='SVU' target='_blank' class='.st-emotion-cache-g2ydmt' style='border: 1px solid #00B0F0; border-radius:5px; padding:6px; text-align: right; color:#00B0F0; font-weight: bolder; font-weight: 600; font-size: 1.2rem; text-decoration: none;'> ...اقرأ المزيد </a>", unsafe_allow_html=True)
      st.write("---")
-     l9, r9=st.columns((4,1))
-     with r9:
-          RUimage= Image.open("images/REU.png")
-          st.image(RUimage)
-     with l9:
-          st.markdown("<h2 style='text-align: right; color: #00B0F0; font-weight:bold;'> جامعة بلاد الشام </h2>" , unsafe_allow_html=True)
-          l91,r91=st.columns(2)
-          with l91:
-               st.markdown("<h5 style='text-align: right; color: #000000;'> الموقع: دمشق  </h5>" , unsafe_allow_html=True)
-          with r91:
-               st.markdown("<h5 style='text-align: right; color: #000000;'>  ترتيب الجامعة على سوريا: 35 </h5>" , unsafe_allow_html=True) 
-               st.markdown("<h5 style='text-align: right; color: #000000;'> الجامعة متخصصة بالعلوم الشرعية </h5>" , unsafe_allow_html=True)
-     st.write("---")
+     
+if selectuni=="المعاهد العليا":
      l10, r10=st.columns((4,1))
      with r10:
           HUimage= Image.open("images/Hiast.png")
@@ -365,7 +340,7 @@ if selectuni=="الجامعات الخاصة":
           HUimage= Image.open("images/RU.webp")
           st.image(HUimage)
      with l6:
-          st.markdown("<h2 style='text-align: right; color: #00B0F0; font-weight:bold;'> جامعة الرشيد </h2>" , unsafe_allow_html=True)
+          st.markdown("<h2 style='text-align: right; color: #00B0F0; font-weight:bold;'> الجامعة البريطانية في دمشق </h2>" , unsafe_allow_html=True)
           l61,r61=st.columns(2)
           with l61:
                st.markdown("<h5 style='text-align: right; color: #000000;'> الموقع: أوتوستراد دمشق-درعا </h5>" , unsafe_allow_html=True)
@@ -752,4 +727,31 @@ if selectuni=="الجامعات الخاصة":
           with l201:
                st.markdown("<h5 style='text-align: right; color: #000000;'> الموقع : حلب  </h5>" , unsafe_allow_html=True)
                st.write("<a href='https://www.facebook.com/syrianuniversity2023/' style='text-align: right; color: #0070C0; font-weight: bolder; font-weight: 600; font-size: 1.2rem;'>syrianuniversity2023</a>", unsafe_allow_html=True)
-       
+     l21, r21=st.columns((4,1))
+     with r21:
+          RUimage= Image.open("images/REU.png")
+          st.image(RUimage)
+     with l21:
+          st.markdown("<h2 style='text-align: right; color: #00B0F0; font-weight:bold;'> جامعة بلاد الشام </h2>" , unsafe_allow_html=True)
+          l91,r91=st.columns(2)
+          with l91:
+               st.markdown("<h5 style='text-align: right; color: #000000;'> الموقع: دمشق  </h5>" , unsafe_allow_html=True)
+          with r91:
+               st.markdown("<h5 style='text-align: right; color: #000000;'>  ترتيب الجامعة على سوريا: 35 </h5>" , unsafe_allow_html=True) 
+               st.markdown("<h5 style='text-align: right; color: #000000;'> الجامعة متخصصة بالعلوم الشرعية </h5>" , unsafe_allow_html=True)
+     st.write("---")  
+     l22, r22=st.columns((4,1))
+     with l22:
+          st.markdown("<h2 style='text-align: right; color: #00B0F0; font-weight:bold;'> جامعة الأمنوس </h2>" , unsafe_allow_html=True)
+          st.write("<a href='https://amanusuniversity.com/' style='text-align: right; color: #0070C0; font-weight: bolder; font-weight: 600; font-size: 1.2rem;'>amanusuniversity.com</a>", unsafe_allow_html=True)
+     st.write("---")  
+     l22, r22=st.columns((4,1))
+     with l22:
+          st.markdown("<h2 style='text-align: right; color: #00B0F0; font-weight:bold;'> جامعة الرواد </h2>" , unsafe_allow_html=True)
+          st.write("<a href='https://alrowaduni.edu.sy/' style='text-align: right; color: #0070C0; font-weight: bolder; font-weight: 600; font-size: 1.2rem;'>alrowaduni.edu.sy</a>", unsafe_allow_html=True)
+     st.write("---")  
+     l22, r22=st.columns((4,1))
+     with l22:
+          st.markdown("<h2 style='text-align: right; color: #00B0F0; font-weight:bold;'> جامعة المعارف للعلوم التطبيقية </h2>" , unsafe_allow_html=True)
+          st.write("<a href='https://mas.edu.sy/' style='text-align: right; color: #0070C0; font-weight: bolder; font-weight: 600; font-size: 1.2rem;'>mas.edu.sy</a>", unsafe_allow_html=True)
+     

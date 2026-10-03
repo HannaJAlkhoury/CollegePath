@@ -79,7 +79,7 @@ st.markdown(
 selectsec = option_menu(
      menu_icon=None,
      menu_title=None,
-     options=["أدبي",  "علمي","شروط"],
+     options=["أدبي",  "علمي", "إرشادات"],
      default_index=2,
      orientation="horizontal",
      styles={
@@ -90,13 +90,11 @@ selectsec = option_menu(
 }
 )
 if selectsec =="شروط":
-     st.markdown("<h4 style='text-align: right; color: #00b0f0;font-weight: bold'>: ملاحظة </h4>", unsafe_allow_html=True)
-     st.markdown("<h5 style='text-align: right; color: #000000;'>إن محرك البحث مبني على مفاضلة وزارة التعليم العالي في دمشق 2024 لذلك فهو لا يتضمن الجامعات الواقعة في إدلب وشمال حلب لكننا سنعمل على إدخالها فور وصول المفاضلة الجديدة</h5>", unsafe_allow_html=True)
      st.markdown("<h4 style='text-align: right; color: #00b0f0;font-weight: bold'>: تعليمات عامة</h4>", unsafe_allow_html=True)
      st.markdown("<h5 style='text-align: right; color: #000000;'> إذا لم تحصل على النتائج التي تريدها حاول تصحيح الأخطاء الإملائية أو تغيير موضوع البحث  </h5>" , unsafe_allow_html=True)
      st.markdown("<h5 style='text-align: right; color: #000000;'> إذا لم تحصل على النتائج المرادة تذكر أن محرك البحث يعمل بالشكل الأمثل عندما نختصر في كتابة الاختصاص </h5>" , unsafe_allow_html=True)
      st.markdown("<h5 style='text-align: right; color: #000000;'> مثال: هندسة الإلكترونيات --> إلكترون  </h5>" , unsafe_allow_html=True)
-     st.markdown("<h5 style='text-align: right; color: #F02020;'>  إن بعض الاختصاصات العلمية التي كانت موجودة في المفاضلة الماضية أصبحت متاحة فقط للفرع المهني وأهمها اختصاصات الكليات التطبيقية لذلك فهي لم تعد متاحة للفرع العلمي </h5>" , unsafe_allow_html=True)
+     st.markdown("<h5 style='text-align: right; color: #F02020;'> احتمالية ورود بعض الأخطاء أو النقص واردة وهذه الأداة مصممة للمساعدة فقط ولا تستبدل الاطلاع على القوائم الرسمية </h5>" , unsafe_allow_html=True)
 if selectsec=="علمي":
      scitable=load_workbook('Science.xlsx')
      activescitable=scitable.active
@@ -117,16 +115,13 @@ if selectsec=="علمي":
           with nr:
                majorname=st.text_input(": اسم الفرع", max_chars=200, key=1 ) 
           with nm:
-               college=st.multiselect(": حدد الجامعات ", options= ["كل الجامعات","جامعة دمشق", "جامعة حلب", "جامعة تشرين", "جامعة البعث","جامعة طرطوس","جامعة حماة", "جامعة الفرات", "الجامعة السورية الافتراضية", "المعهد العالي للعلوم التطبيقية والتكنولوجيا","جامعة إنطاكية السورية الخاصة ","جامعة المنارة ","جامعة قاسيون الخاصة للعلوم والتكنولوجيا ","جامعة الشام الخاصة ","جامعة ايبلا الخاصة ","جامعة الحواش الخاصة ","جامعة الأندلس الخاصة للعلوم الطبية ","جامعة الجزيرة الخاصة ","الجامعة العربية الخاصة للعلوم والتكنولوجيا ","جامعة الشهباء الخاصة ","جامعة الإتحاد الخاصة ","جامعة قرطبة الخاصة ","الجامعة الوطنية الخاصة ","جامعة اليرموك الخاصة ","جامعة الرشيد الخاصة للعلوم والتكنولوجيا ","جامعة الوادي الدولية الخاصة ","الجامعة الدولية الخاصة للعلوم والتكنولوجيا ","الجامعة السورية الخاصة ","الجامعة العربية الدولية الخاصة ","جامعة القلمون الخاصة ","الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري "],default="كل الجامعات")
-          with nl:
-               rawmark=st.number_input(": علامتك في امتحان البكلوريا من 2400", max_value=2400, min_value= 0, value=2400)
+               college=st.multiselect(": حدد الجامعات ", options= ["كل الجامعات","جامعة دمشق", "جامعة حلب", "جامعة تشرين", "جامعة البعث","جامعة طرطوس","جامعة حماة", "جامعة الفرات","جامعة إدلب", "الجامعة السورية الافتراضية", "المعهد العالي للعلوم التطبيقية والتكنولوجيا","جامعة إنطاكية السورية الخاصة ","جامعة المنارة ","جامعة قاسيون الخاصة للعلوم والتكنولوجيا ","جامعة الشام الخاصة ","جامعة ايبلا الخاصة ","جامعة الحواش الخاصة ","جامعة الأندلس الخاصة للعلوم الطبية ","جامعة الجزيرة الخاصة ","الجامعة العربية الخاصة للعلوم والتكنولوجيا ","جامعة الشهباء الخاصة ","جامعة الإتحاد الخاصة ","جامعة قرطبة الخاصة ","الجامعة الوطنية الخاصة ","جامعة اليرموك الخاصة ","جامعة الرشيد الخاصة للعلوم والتكنولوجيا ","جامعة الوادي الدولية الخاصة ","الجامعة الدولية الخاصة للعلوم والتكنولوجيا ","الجامعة السورية الخاصة ","الجامعة العربية الدولية الخاصة ","جامعة القلمون الخاصة ","الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري "],default="كل الجامعات")
           search=st.form_submit_button("🔍ابحث", type="primary")
-     mark = rawmark + ((2400-rawmark)*36)**0.5 +(2400-rawmark)*0.3
      if search==True:
           majorname=majorname.replace("الهندسة","هندسة")
           majorname=majorname.replace("أ", "ا")
           majorname=majorname.replace("إ", "ا")
-          st.markdown("<h4 style='text-align: center; color: #0070C0;'> جميع العلامات المذكورة أدناه هي وسطي معدلات القبول الجامعي (المفاضلة الثانية) للسنوات السابقة </h4>" , unsafe_allow_html=True)
+          st.markdown("<h4 style='text-align: center; color: #0070C0;'> جميع العلامات المذكورة أدناه هي حدود تقريبية غير دقيقة لإعطاء فكرة فقط </h4>" , unsafe_allow_html=True)
           if "كل الجامعات" in college:
                college=["كل الجامعات","جامعة دمشق", "جامعة حلب", "جامعة تشرين", "جامعة البعث","جامعة طرطوس","جامعة حماة", "جامعة الفرات", "الجامعة السورية الافتراضية", "المعهد العالي للعلوم التطبيقية والتكنولوجيا","جامعة إنطاكية السورية الخاصة ","جامعة المنارة ","جامعة قاسيون الخاصة للعلوم والتكنولوجيا ","جامعة الشام الخاصة ","جامعة ايبلا الخاصة ","جامعة الحواش الخاصة ","جامعة الأندلس الخاصة للعلوم الطبية ","جامعة الجزيرة الخاصة ","الجامعة العربية الخاصة للعلوم والتكنولوجيا ","جامعة الشهباء الخاصة ","جامعة الإتحاد الخاصة ","جامعة قرطبة الخاصة ","الجامعة الوطنية الخاصة ","جامعة اليرموك الخاصة ","جامعة الرشيد الخاصة للعلوم والتكنولوجيا ","جامعة الوادي الدولية الخاصة ","الجامعة الدولية الخاصة للعلوم والتكنولوجيا ","الجامعة السورية الخاصة ","الجامعة العربية الدولية الخاصة ","جامعة القلمون الخاصة ","الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري "]
           if re.search("انجليزي",majorname ) or re.search("انكليزي",majorname ) or re.search("انغليزي",majorname ):
@@ -159,7 +154,7 @@ if selectsec=="علمي":
                     for meduni in medunis:
                          if meduni in college:
                               major[1]=meduni
-               if major[0]==majorname1 and major[1] in college and float(major[2])<mark:
+               if major[0]==majorname1 and major[1] in college :
                     kind1="علامة القبول "+major[4]
                     if major[0]=='السنة التحضيرية ':
                          major[1]='حسب مصدر الشهادة'
@@ -176,11 +171,8 @@ if selectsec=="علمي":
           for major in searchresults[0:limit]:
                title= "<h2 style='text-align: right; color: #00B0F0; font-weight:bold;'>" + major[0] + "-" + major[1] +major[5] + "</h2>"
                st.markdown( title, unsafe_allow_html=True)          
-               notleft,notright=st.columns(2)
-               with notright:
-                    st.markdown("<h4 style='text-align: right; color: #000000;'>" + major[2] + ":"+ "علامة القبول "+ major[4] + "</h4>", unsafe_allow_html=True)
-               with notleft:   
-                    st.markdown("<h4 style='text-align: right; color: #000000;'>"+major[3]+ ":"+"الرمز</h4>", unsafe_allow_html=True)          
+               grade=0.97*int(major[2])//24
+               st.markdown("<h4 style='text-align: right; color: #000000;'>" + grade + ":"+ "علامة القبول "+ major[4] + "</h4>", unsafe_allow_html=True) 
                st.write("---")
           if limit==50:
                st.markdown("<h4 style='text-align: right; color: #000000;'> لقد تخطى عدد نتائج بحثك الحد الأقصى للعرض الموضوع لحماية أداء الموقع، نرجوا منك أن تقوم بتخصيص عملية البحث في المرات القادمة</h4>", unsafe_allow_html=True)
@@ -209,7 +201,7 @@ if selectsec== "أدبي":
      if search==True:
           majorname=majorname.replace("أ", "ا")
           majorname=majorname.replace("إ", "ا")
-          st.markdown("<h4 style='text-align: center; color: #0070C0;'> جميع العلامات المذكورة أدناه هي معدلات القبول الجامعي (المفاضلة الثانية) للعام 2023 </h4>" , unsafe_allow_html=True)
+          st.markdown("<h4 style='text-align: center; color: #0070C0;'> جميع العلامات المذكورة أدناه هي حدود تقريبية غير دقيقة لإعطاء فكرة فقط </h4>" , unsafe_allow_html=True)
           if "كل الجامعات" in college:
                college=["كل الجامعات","جامعة دمشق", "جامعة حلب", "جامعة تشرين", "جامعة البعث","جامعة طرطوس","جامعة حماة", "جامعة الفرات", "الجامعة السورية الافتراضية", "المعهد العالي للعلوم التطبيقية والتكنولوجيا","جامعة إنطاكية السورية الخاصة ","جامعة المنارة ","جامعة قاسيون الخاصة للعلوم والتكنولوجيا ","جامعة الشام الخاصة ","جامعة ايبلا الخاصة ","جامعة الحواش الخاصة ","جامعة الأندلس الخاصة للعلوم الطبية ","جامعة الجزيرة الخاصة ","الجامعة العربية الخاصة للعلوم والتكنولوجيا ","جامعة الشهباء الخاصة ","جامعة الإتحاد الخاصة ","جامعة قرطبة الخاصة ","الجامعة الوطنية الخاصة ","جامعة اليرموك الخاصة ","جامعة الرشيد الخاصة للعلوم والتكنولوجيا ","جامعة الوادي الدولية الخاصة ","الجامعة الدولية الخاصة للعلوم والتكنولوجيا ","الجامعة السورية الخاصة ","الجامعة العربية الدولية الخاصة ","جامعة القلمون الخاصة ","الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري "]
           if re.search("انجليزي",majorname ) or re.search("انكليزي",majorname ) or re.search("انغليزي",majorname ):
@@ -242,12 +234,8 @@ if selectsec== "أدبي":
           for major in searchresults[0:limit]:
                title= "<h2 style='text-align: right; color: #00B0F0; font-weight:bold;'>" + major[0] + "-" + major[1] +major[5] + "</h2>"
                st.markdown( title, unsafe_allow_html=True)          
-               notleft,notright=st.columns(2)
-               with notright:
-                    st.markdown("<h4 style='text-align: right; color: #000000;'>" + major[2] + ":"+ "علامة القبول "+ major[4] + "</h4>", unsafe_allow_html=True)
-               with notleft:   
-                    st.markdown("<h4 style='text-align: right; color: #000000;'>"+major[3]+ ":"+"الرمز</h4>", unsafe_allow_html=True)          
+               grade=0.97*int(major[2])//22
+               st.markdown("<h4 style='text-align: right; color: #000000;'>" + grade + ":"+ "علامة القبول "+ major[4] + "</h4>", unsafe_allow_html=True)        
                st.write("---")
           if limit==50:
-
                st.markdown("<h4 style='text-align: right; color: #000000;'> لقد تخطى عدد نتائج بحثك الحد الأقصى للعرض الموضوع لحماية أداء الموقع، نرجوا منك أن تقوم بتخصيص عملية البحث في المرات القادمة</h4>", unsafe_allow_html=True)

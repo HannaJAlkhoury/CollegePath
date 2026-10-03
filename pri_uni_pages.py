@@ -10,7 +10,7 @@ def cost(unicost):
         if costs[2]:    
             st.markdown("<h5 style='text-align: right; color: #000000;'>الحد الأعلى لرسم السنة الدراسية بالدولار الأمريكي:"+ str(costs[2]) +"</h5>" , unsafe_allow_html=True)
             if costs[3]:    
-                st.markdown("<h5 style='text-align: right; color: #000000;'> للعرب والأجانب بالدولار الأمريكي :"+ str(costs[3]) +"</h5>" , unsafe_allow_html=True)
+                st.markdown("<h5 style='text-align: right; color: #000000;'> رسم الساعة للعرب والأجانب بالدولار الأمريكي :"+ str(costs[3]) +"</h5>" , unsafe_allow_html=True)
     return
 def Uni_Page(uniname,nickname,map_link,uni_image,website,location,rank,description,note,majors,social_media,colleges=[],unihospitals=[],High_inst=[],Mid_inst=[],campus_housing=True):
     icon = Image.open("images/cap.png")
