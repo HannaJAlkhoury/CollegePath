@@ -115,11 +115,9 @@ def Uni_Page(uniname,nickname,map_link,uni_image,website,location,rank,descripti
             st.markdown("<h5 style='text-align: right; color: #000000;'> لكليات الهندسة 30,000 ليرة سورية جديدة  </h5>" , unsafe_allow_html=True)
             st.markdown("<h5 style='text-align: right; color: #000000;'> لباقي الكليات 20,000 ليرة سورية جديدة  </h5>" , unsafe_allow_html=True)
 
-            st.image(image)
             st.markdown("<h3 style='text-align: right; color: #0070C0;'>  وللمعاهد حسب القبول الموازي </h3>" , unsafe_allow_html=True)
             st.markdown("<h5 style='text-align: right; color: #000000;'> لباقي الكليات 10,000 ليرة سورية جديدة  </h5>" , unsafe_allow_html=True)
 
-            st.image(image)
             st.markdown("<h3 style='text-align: right; color: #00B0F0;'> تكاليف المواصلات 🚌</h3>" , unsafe_allow_html=True)
             st.markdown("<h5 style='text-align: right; color: #000000;'> بين 1200 و5000 ليرة سورية جديدة شهرياً باستخدام وسائل النقل العامة حسب البعد عن الكلية </h5>" , unsafe_allow_html=True)
             st.markdown("<h5 style='text-align: right; color: #000000;'> بين 2000 و10000 ليرة سورية جديدة شهرياً باستخدام وسائل نقل خاصة أو بالاتفاق مع سائق حافلة أو أجرة حسب البعد عن الكلية </h5>" , unsafe_allow_html=True)
