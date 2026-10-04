@@ -89,7 +89,7 @@ selectsec = option_menu(
      "nav-link-selected": {"background-color": "00B0F0"},
 }
 )
-if selectsec =="شروط":
+if selectsec =="إرشادات":
      st.markdown("<h4 style='text-align: right; color: #00b0f0;font-weight: bold'>: تعليمات عامة</h4>", unsafe_allow_html=True)
      st.markdown("<h5 style='text-align: right; color: #000000;'> إذا لم تحصل على النتائج التي تريدها حاول تصحيح الأخطاء الإملائية أو تغيير موضوع البحث  </h5>" , unsafe_allow_html=True)
      st.markdown("<h5 style='text-align: right; color: #000000;'> إذا لم تحصل على النتائج المرادة تذكر أن محرك البحث يعمل بالشكل الأمثل عندما نختصر في كتابة الاختصاص </h5>" , unsafe_allow_html=True)
@@ -154,7 +154,7 @@ if selectsec=="علمي":
                     for meduni in medunis:
                          if meduni in college:
                               major[1]=meduni
-               if major[0]==majorname1 and major[1] in college :
+               if major[0]==majorname1 and major[1] in college and major[4].strip()!='منح':
                     kind1="علامة القبول "+major[4]
                     if major[0]=='السنة التحضيرية ':
                          major[1]='حسب مصدر الشهادة'
@@ -162,17 +162,20 @@ if selectsec=="علمي":
                          major[2]=""
                     else:
                          major[2]=float(major[2])
-                         major[2]=str(int(major[2] - ((2400-major[2])*9)**0.5 -(2400-major[2])*0.03))
                     searchresults.append(major)
           if len(searchresults)>50:
                limit=50
           else:
                limit=len(searchresults)
           for major in searchresults[0:limit]:
-               title= "<h2 style='text-align: right; color: #00B0F0; font-weight:bold;'>" + major[0] + "-" + major[1] +major[5] + "</h2>"
-               st.markdown( title, unsafe_allow_html=True)          
-               grade=0.97*int(major[2])//24
-               st.markdown("<h4 style='text-align: right; color: #000000;'>" + grade + ":"+ "علامة القبول "+ major[4] + "</h4>", unsafe_allow_html=True) 
+               title= "<h2 style='text-align: right; color: #00B0F0; font-weight:bold;'>" + major[0]   + "</h2>"
+               st.markdown( title, unsafe_allow_html=True) 
+               place,fees=st.columns(2)
+               with fees:
+                    st.markdown("<h4 style='text-align: right; color: #000000;'>" + "القبول "+ major[4] + "</h4>", unsafe_allow_html=True) 
+               with place:
+                    if major[5] is not None:
+                         st.markdown("<h4 style='text-align: right; color: #000000;'>" + "الموقع: "+  major[1]+ "-" +major[5] + "</h4>", unsafe_allow_html=True) 
                st.write("---")
           if limit==50:
                st.markdown("<h4 style='text-align: right; color: #000000;'> لقد تخطى عدد نتائج بحثك الحد الأقصى للعرض الموضوع لحماية أداء الموقع، نرجوا منك أن تقوم بتخصيص عملية البحث في المرات القادمة</h4>", unsafe_allow_html=True)
@@ -232,10 +235,14 @@ if selectsec== "أدبي":
           else:
                limit=len(searchresults)
           for major in searchresults[0:limit]:
-               title= "<h2 style='text-align: right; color: #00B0F0; font-weight:bold;'>" + major[0] + "-" + major[1] +major[5] + "</h2>"
-               st.markdown( title, unsafe_allow_html=True)          
-               grade=0.97*int(major[2])//22
-               st.markdown("<h4 style='text-align: right; color: #000000;'>" + grade + ":"+ "علامة القبول "+ major[4] + "</h4>", unsafe_allow_html=True)        
-               st.write("---")
+                         title= "<h2 style='text-align: right; color: #00B0F0; font-weight:bold;'>" + major[0]   + "</h2>"
+                         st.markdown( title, unsafe_allow_html=True) 
+                         place,fees=st.columns(2)
+                         with fees:
+                              st.markdown("<h4 style='text-align: right; color: #000000;'>" + "القبول "+ major[4] + "</h4>", unsafe_allow_html=True) 
+                         with place:
+                              if major[5] is not None:
+                                   st.markdown("<h4 style='text-align: right; color: #000000;'>" + "الموقع: "+  major[1]+ "-" +major[5] + "</h4>", unsafe_allow_html=True) 
+                         st.write("---")
           if limit==50:
                st.markdown("<h4 style='text-align: right; color: #000000;'> لقد تخطى عدد نتائج بحثك الحد الأقصى للعرض الموضوع لحماية أداء الموقع، نرجوا منك أن تقوم بتخصيص عملية البحث في المرات القادمة</h4>", unsafe_allow_html=True)
